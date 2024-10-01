@@ -1,6 +1,6 @@
 import express from "express";
 
-import { create, moviedelete, movieIndex, update } from "../controllers/movie-controller";
+import { create, moviedelete, movieIndex, update } from "../controllers/movie-controller.js";
 
 const route = express.Router();
 
