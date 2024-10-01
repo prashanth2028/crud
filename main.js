@@ -6,6 +6,9 @@ const app = express();
 const port = 6969;
 connectDB();
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 app.get('/',(req,res) => {
     res.json({msg : "hello prashanth"});
 });

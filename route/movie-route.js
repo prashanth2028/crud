@@ -1,6 +1,6 @@
 import express from "express";
 
-import { create, moviedelete, movieIndex, update } from "../controllers/movie-controller.js";
+import { create, Detail, moviedelete, movieIndex, update } from "../controllers/movie-controller.js";
 
 const route = express.Router();
 
@@ -12,6 +12,8 @@ route.get('/',movieIndex);
 //create 
 route.post('/' , create);
 
+//show
+route.get('/:id' , Detail);
 //update
 route.put('/:id' , update);
 
