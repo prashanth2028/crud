@@ -1,28 +1,22 @@
 import express from "express";
 
+import { create, moviedelete, movieIndex, update } from "../controllers/movie-controller";
+
 const route = express.Router();
 
 //crud operation for movies booking
 
 //read
-route.get('/',(req,res) => {
-    res.send("get all movies list");
-});
+route.get('/',movieIndex);
 
 //create 
-route.post('/' , (req,res) => {
-    res.send("create a movie");
-});
+route.post('/' , create);
 
 //update
-route.put('/:id' , () => {
-    res.send("update a movie");
-});
+route.put('/:id' , update);
 
 //delete
-route.delete('/:id' , () => {
-    res.send("delete movie");
-});
+route.delete('/:id' ,moviedelete);
 
 
 export default route;
